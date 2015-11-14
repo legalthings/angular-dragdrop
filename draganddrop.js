@@ -126,7 +126,9 @@
 
                     var dragImage = attrs.dragImage || null;
 
-                    element.addClass(draggingClass);
+                    setTimeout(function() {
+                        element.addClass(draggingClass);
+                    }, 1);
                     element.bind('$destroy', dragendHandler);
 
                     //Code to make sure that the setDragImage is available. IE 10, 11, and Opera do not support setDragImage.
